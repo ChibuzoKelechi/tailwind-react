@@ -2,6 +2,7 @@ import Head from './Head'
 import './App.css'
 import Info from './Info'
 // import codeimg from './codelaptop.jpg';
+import Laptop from './assets/codelaptop.jpg';
 
 function App() {
 
@@ -10,7 +11,7 @@ function App() {
     <main className='bg-black text-white'>
      <Head/>
       <Info/>
-      {/* <img src="reactwind\src\img\code.jpg" alt="mycode" /> */}
+  <img src={Laptop} alt="mycode" className='w-64 mx-auto'/>
     </main>
   )
 }
