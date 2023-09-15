@@ -1,14 +1,35 @@
 import Laptop from './assets/codelaptop.jpg';
+const sections = [
+  {
+    title: 'Frameworks',
+    id: 0
+  },
+  {
+    title: 'Jobs',
+    id: 1
+  } ,
+  {
+    title: 'Fields',
+    id: 2
+  }
+]
 
 const Info = () => {
+    
+    const navItems = sections.map(item => {
+      return <li className='p-1 text-indigo-200 ml-4 font-bold hover:border-b-2 border-indigo-500' key={item.id}>{item.title}</li>})
+    ;
+
     return ( 
        <>
         <nav className='p-2'>
           <ul className="flex justify-end mr-2">
-            <li className='p-1 text-indigo-200 ml-4 font-bold hover:border-b-2 border-indigo-500'>Frameworks</li>
+            {/* <li className='p-1 text-indigo-200 ml-4 font-bold hover:border-b-2 border-indigo-500'>Frameworks</li>
             <li className='p-1 text-indigo-200 ml-4 font-bold hover:border-b-2 border-indigo-500'>Jobs</li>
             <li className='p-1 text-indigo-200 ml-4 font-bold hover:border-b-2 border-indigo-500'>Fields</li>
-          </ul>
+          */}
+           {navItems}
+          </ul> 
         </nav>
 
         <section className="my-2 flex justify-start lg:flex-col lg:justify-center">
@@ -29,7 +50,7 @@ const Info = () => {
         </section>
        </>
      );
-}
+        }
  
 export default Info;
 
