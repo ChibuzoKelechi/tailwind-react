@@ -8,6 +8,7 @@ function App() {
   return (
     <main className='bg-black text-white'>
      <Head/>
+     
       <Info/>
 
       
